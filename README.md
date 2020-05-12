@@ -9,3 +9,4 @@
   - [WebRequest](https://github.com/verloka/Networking/blob/master/src/WebRequestTest/WebRequestTest/Program.cs)
   - [Asynchronous WebRequest](https://github.com/verloka/Networking/blob/master/src/ErrorHandling/ErrorHandling/AsyncRequest.cs)
   - [Error handling with Polly lib](https://github.com/verloka/Networking/blob/master/src/ErrorHandling/ErrorHandling/PollyHandling.cs)
+  - [Sockets](https://github.com/verloka/Networking/blob/master/src/Sockets/Sockets/Program.cs)
