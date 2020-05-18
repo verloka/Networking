@@ -11,3 +11,4 @@
   - [Error handling with Polly lib](https://github.com/verloka/Networking/blob/master/src/ErrorHandling/ErrorHandling/PollyHandling.cs)
   - [Sockets](https://github.com/verloka/Networking/blob/master/src/Sockets/Sockets/Program.cs)
   - HTTP [client](https://github.com/verloka/Networking/tree/master/src/HTTP/Client/Client) and [server](https://github.com/verloka/Networking/tree/master/src/HTTP/Server/Server)
+  - [FTP clietn](https://github.com/verloka/Networking/blob/master/src/FTPClient/FTPClient/Program.cs)
