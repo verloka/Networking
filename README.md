@@ -14,3 +14,4 @@
   - [FTP client](https://github.com/verloka/Networking/blob/master/src/FTPClient/FTPClient/Program.cs)
   - TCP [client](https://github.com/verloka/Networking/blob/master/src/TCPClient/TCPClient/Program.cs) and [server](https://github.com/verloka/Networking/blob/master/src/TCPServer/TCPServer/Program.cs)
   - UDP [client](https://github.com/verloka/Networking/blob/master/src/UDPClient/UDPClient/Program.cs) and [server](https://github.com/verloka/Networking/blob/master/src/UDPServer/UDPServer/Program.cs)
+  - [Caching](https://github.com/verloka/Networking/blob/master/src/Caching/Caching)
