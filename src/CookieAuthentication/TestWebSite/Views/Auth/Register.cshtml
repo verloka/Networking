@@ -1,0 +1,19 @@
+﻿
+@model TestWebSite.Models.Credentials
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+
+    <div class="input-group mb-3 has-icon">
+        @Html.TextBoxFor(model => model.Username, new { @class = "form-control rounded-0 form-control-sm", type = "text", required = "required" })
+        <span class="fas fa-envelope form-control-feedback"></span>
+    </div>
+
+    <div class="input-group mb-3 has-icon">
+        @Html.PasswordFor(model => model.Password, new { @class = "form-control rounded-0 form-control-sm", required = "required" })
+        <span class="fas fa-lock form-control-feedback"></span>
+    </div>
+
+    <button type="submit" class="btn btn-success btn-block btn-flat">Register</button>
+}
