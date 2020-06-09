@@ -17,7 +17,6 @@
   - [Caching](https://github.com/verloka/Networking/blob/master/src/Caching/Caching)
   - [JWT Auth](https://github.com/verloka/Networking/tree/master/src/JWTAuthentication/JWTAuthentication)
   - [Cookie Auth](https://github.com/verloka/Networking/tree/master/src/CookieAuthentication/TestWebSite)
-  
-  
-  
+  - [Health check](https://github.com/verloka/Networking/tree/master/src/HealthChecksTest/HealthChecksTest)
+  - [Watchdog](https://github.com/verloka/Networking/blob/master/src/WatchDog/WatchDog/Program.cs)
   
