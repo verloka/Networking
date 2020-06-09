@@ -13,7 +13,7 @@ namespace HealthChecksTest.Controllers
         [HttpGet]
         public IActionResult Get()
         {
-            Thread.Sleep(Latency += 500);
+            Thread.Sleep(Latency += 1000);
             return Ok("Data");
         }
 
