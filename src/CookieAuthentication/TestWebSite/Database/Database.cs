@@ -14,10 +14,13 @@ namespace TestWebSite.Database
             var db = serviceScope.ServiceProvider.GetService<Context>();
 
             //migration here
-            try { if (!db.Database.EnsureCreated()) db.Database.Migrate(); }
+            try
+            {
+                if (!db.Database.EnsureCreated()) 
+                    db.Database.Migrate();
+            }
             catch (Exception e)
             {
-
             }
 
             var admin = await db.Users.FirstOrDefaultAsync(x => x.Username == "admin");

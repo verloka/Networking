@@ -1,0 +1,20 @@
+﻿@model List<TestWebSite.Database.Models.Ticks>
+
+
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Date</th>
+                <th>Time</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.DT.ToShortDateString()</td>
+                    <td>@item.DT.ToShortTimeString()</td>
+                </tr>
+            }
+        </tbody>
+    </table>

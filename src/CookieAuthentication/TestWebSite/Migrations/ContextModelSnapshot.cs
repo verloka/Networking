@@ -17,6 +17,20 @@ namespace TestWebSite.Migrations
                 .HasAnnotation("ProductVersion", "3.1.4")
                 .HasAnnotation("Relational:MaxIdentifierLength", 64);
 
+            modelBuilder.Entity("TestWebSite.Database.Models.Ticks", b =>
+                {
+                    b.Property<int>("ID")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    b.Property<DateTime>("DT")
+                        .HasColumnType("datetime(6)");
+
+                    b.HasKey("ID");
+
+                    b.ToTable("Ticks");
+                });
+
             modelBuilder.Entity("TestWebSite.Database.Models.User", b =>
                 {
                     b.Property<Guid>("Id")
