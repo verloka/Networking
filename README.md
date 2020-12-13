@@ -20,4 +20,5 @@
   - [Cookie Auth](https://github.com/verloka/Networking/tree/master/src/CookieAuthentication/TestWebSite)
   - [Health check](https://github.com/verloka/Networking/tree/master/src/HealthChecksTest/HealthChecksTest)
   - [Watchdog](https://github.com/verloka/Networking/blob/master/src/WatchDog/WatchDog/Program.cs)
+  - Radius [client](https://github.com/verloka/Networking/blob/master/src/Radius/Radius/RadiusClient.cs) and [server](https://github.com/verloka/Networking/blob/master/src/Radius/Radius/RadiusServer.cs)
   
