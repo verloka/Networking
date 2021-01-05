@@ -1,0 +1,117 @@
+syntax = "proto3";
+
+//Timestamp and duration
+import "google/protobuf/timestamp.proto";
+import "google/protobuf/duration.proto";
+
+//Any
+import "google/protobuf/any.proto";
+
+//Empty message
+import "google/protobuf/empty.proto";
+
+//Nullable values
+import "google/protobuf/wrappers.proto";
+
+option csharp_namespace = "GrpcServer";
+
+package greet;
+
+service Greeter {
+  rpc SayHello (HelloRequest) returns (HelloReply);
+  rpc Echo (EchoData) returns (EchoData);
+  rpc TestTypes (google.protobuf.Empty) returns (TypesData);
+  rpc TestNullableTypes (google.protobuf.Empty) returns (NullableTypesData);
+  rpc TestCollection (google.protobuf.Empty) returns (CollectionsData);
+  rpc TestAny (google.protobuf.Empty) returns (Status);
+  rpc GetPerson (PersonRequest) returns (PersonResponse);
+  rpc ServerTimeStream (google.protobuf.Empty) returns (stream StreamData);
+  rpc ClientTimeStream (stream StreamData) returns (HelloReply);
+  rpc Chat (stream HelloReply) returns (stream HelloReply);
+}
+
+message HelloRequest {
+  string name = 1;
+}
+
+message HelloReply {
+  string message = 1;
+}
+
+message EchoData {
+  string message = 1;
+}
+
+message TypesData {
+	double doubleType = 1;		//double
+	float floatType = 2;		//float
+	int32 int32Type = 3;		//int
+	int64 int64Type = 4;		//long
+	uint32 uint32Type = 5;		//uint
+	uint64 uint64Type = 6;		//ulong
+	sint32 sint32Type = 7;		//int
+	sint64 sint64Type = 8;		//long
+	fixed32 fixed32Type = 9;	//uint
+	fixed64 fixed64Type = 10;	//ulong
+	sfixed32 sfixed32Type = 11;	//int
+	sfixed64 sfixed64Type = 12;	//long
+	bool boolType = 13;			//bool
+	string stringType = 14;		//string
+	bytes bytesType = 15;		//ByteString
+
+	google.protobuf.Timestamp timestampType = 16;	//DateTime / DateTimeOffset
+	google.protobuf.Duration durationType = 17;	//TimeSpan
+}
+
+message NullableTypesData {
+	google.protobuf.BoolValue boolType = 1;			//bool?	
+	google.protobuf.DoubleValue doubleType = 2;		//double?
+	google.protobuf.FloatValue floatType = 3;		//float?
+	google.protobuf.Int32Value intType = 4;			//int?
+	google.protobuf.Int64Value longType = 5;		//long?
+	google.protobuf.UInt32Value uintType = 6;		//uint?
+	google.protobuf.UInt64Value ulongType = 7;		//ulong?
+	google.protobuf.StringValue stringType = 8;		//string
+	google.protobuf.BytesValue bytesType = 9;		//ByteString
+}
+
+message CollectionsData {
+	//List
+	repeated string names = 1;
+	repeated int32 numbers = 2;
+
+	//Dictionary
+	map<int32, string> idName = 3;
+	map<string, float> guidValue = 4;
+}
+
+message Error {
+	int32 code = 1;
+	string message = 2;
+}
+
+message Person {
+	string name = 1;
+	string address = 2;
+	int32 age = 3;
+}
+
+message Status {
+    string message = 1;
+    google.protobuf.Any detail = 2;
+}
+
+message PersonRequest {
+	int32 id = 1;
+}
+
+message PersonResponse {
+	oneof result {
+		Error error = 1;
+		Person person = 2;
+	}
+}
+
+message StreamData {
+	int64 tikcs = 1;
+}
