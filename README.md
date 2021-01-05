@@ -21,4 +21,5 @@
   - [Health check](https://github.com/verloka/Networking/tree/master/src/HealthChecksTest/HealthChecksTest)
   - [Watchdog](https://github.com/verloka/Networking/blob/master/src/WatchDog/WatchDog/Program.cs)
   - Radius [client](https://github.com/verloka/Networking/blob/master/src/Radius/Radius/RadiusClient.cs) and [server](https://github.com/verloka/Networking/blob/master/src/Radius/Radius/RadiusServer.cs)
+  - gRPC [client](https://github.com/verloka/Networking/blob/master/src/GrpcClient/GrpcClient/MainWindow.xaml.cs) and [server](https://github.com/verloka/Networking/blob/master/src/GrpcServer/GrpcServer/Services/GreeterService.cs)
   
