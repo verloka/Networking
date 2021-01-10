@@ -1,0 +1,30 @@
+﻿@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-center">
+    <h1 class="display-4">Welcome</h1>
+
+    <div class="row">
+        <div class="col-12 form-group">
+            <h3>Message</h3>
+            <textarea id="MessageText" class="form-control" placeholder="Enter chat message"></textarea>
+        </div>
+
+        <div class="col-12 text-right form-grou">
+            <button id="sendBtn" type="button" class="btn btn-primary">Send</button>
+        </div>
+
+        <div class="col-12 form-grou">
+            <h3>Chat</h3>
+        </div>
+
+        <div id="MessagesSection" class="col-12 form-group">
+
+        </div>
+    </div>
+</div>
+
+@section Scripts {
+    <script src="~/js/site.js" asp-append-version="true"></script>
+}
