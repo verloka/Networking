@@ -1,26 +1,27 @@
 ﻿@{
-    ViewData["Title"] = "Home Page";
+    ViewData["Title"] = "Chat Page";
 }
 
-<div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-
-    <div class="row">
-        <div class="col-12 form-group">
-            <h3>Message</h3>
-            <textarea id="MessageText" class="form-control" placeholder="Enter chat message"></textarea>
+<div class="container">
+    <div class="row align-items-start">
+        <div class="col text-center">
+            <h1 class="display-4">Welcome, username!</h1>
         </div>
-
-        <div class="col-12 text-right form-grou">
-            <button id="sendBtn" type="button" class="btn btn-primary">Send</button>
+    </div>
+    <div class="row align-items-center">
+        <div class="col">
+            <div class="card rounded-0">
+                <div id="MessagesSection" class="card-body toast-container" style="overflow-y: auto;">
+                </div>
+            </div>
         </div>
-
-        <div class="col-12 form-grou">
-            <h3>Chat</h3>
-        </div>
-
-        <div id="MessagesSection" class="col-12 form-group">
-
+    </div>
+    <div class="row align-items-end">
+        <div class="col">
+            <div class="input-group mb-3">
+                <input id="MessageText" type="text" class="form-control rounded-0" placeholder="Enter chat message">
+                <button id="sendBtn" class="btn btn-outline-secondary rounded-0" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16"><path d="M5.921 11.9L1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" /></svg></button>
+            </div>
         </div>
     </div>
 </div>

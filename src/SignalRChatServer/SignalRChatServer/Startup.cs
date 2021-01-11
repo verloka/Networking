@@ -18,6 +18,8 @@ namespace SignalRChatServer
                     .AllowAnyHeader()
                     .AllowAnyMethod()
                     .AllowCredentials()));
+
+            services.AddSingleton<StoreService>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
