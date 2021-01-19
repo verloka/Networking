@@ -2,10 +2,12 @@
     ViewData["Title"] = "Chat Page";
 }
 
+<input id="Token" type="text" name="Token" value="@ViewBag.Token" hidden />
+
 <div class="container">
     <div class="row align-items-start">
         <div class="col text-center">
-            <h1 class="display-4">Welcome, username!</h1>
+            <h1 class="display-4">Welcome, <span id="Username">@ViewBag.Username</span>! (<a href="/Logout">log out</a>)</h1>
         </div>
     </div>
     <div class="row align-items-center">
@@ -17,10 +19,18 @@
         </div>
     </div>
     <div class="row align-items-end">
-        <div class="col">
+        <div id="PublicMessages" class="col">
             <div class="input-group mb-3">
                 <input id="MessageText" type="text" class="form-control rounded-0" placeholder="Enter chat message">
                 <button id="sendBtn" class="btn btn-outline-secondary rounded-0" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16"><path d="M5.921 11.9L1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" /></svg></button>
+            </div>
+        </div>
+        <div id="PrivateMessages" class="col" style="display: none;">
+            <div class="input-group mb-3">
+                <span class="input-group-text rounded-0">PM:<span id="PrivateMessageUsername"></span></span>
+                <input id="pMessageText" type="text" class="form-control rounded-0" placeholder="Enter private message">
+                <button id="cancelBtn" class="btn btn-outline-secondary rounded-0" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-x" viewBox="0 0 16 16"><path d="M4.646 4.646a.5.5 0 0 1 .708 0L8 7.293l2.646-2.647a.5.5 0 0 1 .708.708L8.707 8l2.647 2.646a.5.5 0 0 1-.708.708L8 8.707l-2.646 2.647a.5.5 0 0 1-.708-.708L7.293 8 4.646 5.354a.5.5 0 0 1 0-.708z" /></svg></button>
+                <button id="psendBtn" class="btn btn-outline-secondary rounded-0" type="button"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-reply-fill" viewBox="0 0 16 16"><path d="M5.921 11.9L1.353 8.62a.719.719 0 0 1 0-1.238L5.921 4.1A.716.716 0 0 1 7 4.719V6c1.5 0 6 0 7 8-2.5-4.5-7-4-7-4v1.281c0 .56-.606.898-1.079.62z" /></svg></button>
             </div>
         </div>
     </div>

@@ -1,0 +1,31 @@
+﻿@model SignalRChatShare.Models.User
+
+@{
+    ViewData["Title"] = "Login";
+}
+
+@using (Html.BeginForm())
+{
+    <div class="row">
+        <div class="col-12 text-center">
+            <h1 class="display-4">To use chat, you must first login</h1>
+        </div>
+        <div class="col-12 form-group">
+            <label class="col-form-label">Username (min length - 5)</label>
+            @Html.TextBoxFor(model => model.Username, new { @class = "form-control rounded-0", type = "text", placeholder = "Enter username" })
+        </div>
+        <div class="col-12 form-group">
+            <label class="col-form-label">Password (reverse the username)</label>
+            @Html.TextBoxFor(model => model.Password, new { @class = "form-control rounded-0", type= "password", placeholder = "Enter password" })
+        </div>
+        @if (!string.IsNullOrWhiteSpace(ViewBag.Error))
+        {
+            <div class="col-12 text-center form-group">
+                <h4 class="display-6 text-danger">@ViewBag.Error</h4>
+            </div>
+        }
+        <div class="col-12 text-right form-group">
+            <input type="submit" class="btn btn-success" value="Login" />
+        </div>
+    </div>
+}

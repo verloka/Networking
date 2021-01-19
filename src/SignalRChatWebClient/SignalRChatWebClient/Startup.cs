@@ -1,8 +1,11 @@
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using SignalRChatShare;
+using SignalRChatWebClient.Middlewares;
 
 namespace SignalRChatWebClient
 {
@@ -18,6 +21,9 @@ namespace SignalRChatWebClient
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllersWithViews();
+
+            services.AddScoped<AuthService>();
+            services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
         }
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
@@ -30,6 +36,8 @@ namespace SignalRChatWebClient
             {
                 app.UseExceptionHandler("/Home/Error");
             }
+
+            app.UseMiddleware<JwtMiddleware>();
 
             app.UseStaticFiles();
             app.UseRouting();

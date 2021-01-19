@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30804.86
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChatServer", "SignalRChatServer.csproj", "{BF3B5966-8E43-4D7C-94B8-A193C6556501}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SignalRChatServer", "SignalRChatServer.csproj", "{BF3B5966-8E43-4D7C-94B8-A193C6556501}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SignalRChatShare", "..\..\SignalRChatShare\SignalRChatShare\SignalRChatShare.csproj", "{EB17C9DE-B127-44D1-9B32-01B232900365}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{BF3B5966-8E43-4D7C-94B8-A193C6556501}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BF3B5966-8E43-4D7C-94B8-A193C6556501}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BF3B5966-8E43-4D7C-94B8-A193C6556501}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EB17C9DE-B127-44D1-9B32-01B232900365}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EB17C9DE-B127-44D1-9B32-01B232900365}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EB17C9DE-B127-44D1-9B32-01B232900365}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EB17C9DE-B127-44D1-9B32-01B232900365}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
