@@ -7,6 +7,17 @@
             .withUrl("http://localhost:3000/chat", { accessTokenFactory: () => $('#Token').val() })
             .build();
 
+        //get groups
+        hubConnection.on("SendGroups", function (data) {
+            $('#ChatGroups').empty();
+
+            for (var i = 0; i < data.length; i++) {
+                $('#ChatGroups').append(`<option value="${data[i]}">${data[i]}</option>`);
+            }
+
+            $("#ChatGroups").val($("#ChatGroups option:first").val());
+        });
+
         //take a new message
         hubConnection.on("Send", function (data) {
             $('#MessagesSection').append(MakeMessage(data.username, FormatDate(data.date), data.text, hubConnection.connection.connectionId == data.connectionID));
@@ -128,7 +139,7 @@
         if ($('#MessageText').val() == undefined || $('#MessageText').val() == '')
             return;
 
-        hubConnection.invoke("Send", $('#MessageText').val());
+        hubConnection.invoke("Send", $('#MessageText').val(), $('#ChatGroups').val());
         $('#MessageText').val('');
     });
     $('#MessageText').bind("enterKey", function (e) {
@@ -145,7 +156,7 @@
         if ($('#pMessageText').val() == undefined || $('#pMessageText').val() == '')
             return;
 
-        hubConnection.invoke("PM", $('#pMessageText').val(), $('#PrivateMessageUsername').text());
+        hubConnection.invoke("PM", $('#pMessageText').val(), $('#PrivateMessageUsername').text(), $('#ChatGroups').val());
         $('#pMessageText').val('');
     });
     $('#pMessageText').bind("enterKey", function (e) {
@@ -167,6 +178,12 @@
 
         $('#PrivateMessages').hide();
         $('#PublicMessages').show();
+    });
+
+    //chnage group
+    $("#ChatGroups").change(() => {
+        $('#MessagesSection').empty();
+        hubConnection.invoke("Enter", $('#ChatGroups').val());
     });
 
     UpdateSectionSize();

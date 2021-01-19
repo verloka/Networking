@@ -5,11 +5,22 @@ namespace SignalRChatServer.Services
 {
     public class StoreService
     {
-        public List<Message> GlobalChat { get; private set; }
+        Dictionary<string, List<Message>> History { get; set; }
+
+        public List<Message> this[string Key]
+        {
+            get
+            {
+                if (!History.ContainsKey(Key))
+                    History.Add(Key, new List<Message>());
+
+                return History[Key];
+            }
+        }
 
         public StoreService()
         {
-            GlobalChat = new List<Message>();
+            History = new Dictionary<string, List<Message>>();
         }
     }
 }
