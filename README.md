@@ -22,4 +22,5 @@
   - [Watchdog](https://github.com/verloka/Networking/blob/master/src/WatchDog/WatchDog/Program.cs)
   - Radius [client](https://github.com/verloka/Networking/blob/master/src/Radius/Radius/RadiusClient.cs) and [server](https://github.com/verloka/Networking/blob/master/src/Radius/Radius/RadiusServer.cs)
   - gRPC [client](https://github.com/verloka/Networking/blob/master/src/GrpcClient/GrpcClient/MainWindow.xaml.cs) and [server](https://github.com/verloka/Networking/blob/master/src/GrpcServer/GrpcServer/Services/GreeterService.cs)
+  - SignalR chat [server](https://github.com/verloka/Networking/blob/master/src/SignalRChatServer/SignalRChatServer/Services/ChatHub.cs) and [web client](https://github.com/verloka/Networking/blob/master/src/SignalRChatWebClient/SignalRChatWebClient/wwwroot/js/site.js) with [wpf client](https://github.com/verloka/Networking/blob/master/src/SignalRChatWPFClient/SignalRChatWPFClient/Core/Chat.cs)
   
