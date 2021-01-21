@@ -1,4 +1,4 @@
-﻿using SignalRChatServer.Models;
+﻿using SignalRChatShare.Models;
 using System.Collections.Generic;
 
 namespace SignalRChatServer.Services

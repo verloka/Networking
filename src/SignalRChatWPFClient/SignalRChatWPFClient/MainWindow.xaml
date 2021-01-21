@@ -5,8 +5,58 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:SignalRChatWPFClient"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="SignalR" 
+        Height="450"
+        Width="800" 
+        Loaded="windowLoaded" Icon="/chat.ico">
     <Grid>
-
+        <Grid x:Name="gridLogin" Background="White" Panel.ZIndex="1" Visibility="Visible">
+            <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+                <TextBlock Text="To use chat, you must first login" HorizontalAlignment="Center" FontSize="24"/>
+                <StackPanel HorizontalAlignment="Center">
+                    <TextBlock Text="Username (min length - 5)" Margin="0,5,0,0"/>
+                    <TextBox x:Name="tbUsername" Width="250"/>
+                    <TextBlock Text="Password (reverse the username)" Margin="0,5,0,0"/>
+                    <PasswordBox x:Name="tbPassword" Width="250"/>
+                    <Button x:Name="btnLogin" Content="Login" Margin="0,5,0,0" Click="btnLogin_Click"/>
+                </StackPanel>
+            </StackPanel>
+        </Grid>
+        <Grid x:Name="gridChat" Visibility="Collapsed">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="auto"/>
+                <RowDefinition Height="*"/>
+                <RowDefinition Height="auto"/>
+            </Grid.RowDefinitions>
+            <StackPanel Orientation="Horizontal" Margin="5,5,5,5">
+                <TextBlock x:Name="tbGreetings" Text="Welcome, username!" FontSize="16"/>
+                <Button x:Name="btnLogOut" Content="Log out" Margin="5,0,0,0" Click="btnLogOutClick"/>
+            </StackPanel>
+            <ComboBox x:Name="cbGroups" Grid.Row="1" SelectionChanged="cbGroupsSelectionChnaged"></ComboBox>
+            <ScrollViewer x:Name="svMessages" Grid.Row="2">
+                <StackPanel x:Name="spMessages" ></StackPanel>
+            </ScrollViewer>
+            <Grid x:Name="gridMessage" Grid.Row="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBox x:Name="tbMessage" Grid.Column="0"/>
+                <Button x:Name="btnSend" Grid.Column="1" Content="Send" Width="75" Click="btnSendClick"/>
+            </Grid>
+            <Grid x:Name="gridPrivateMessage" Grid.Row="3" Visibility="Collapsed">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="auto"/>
+                    <ColumnDefinition Width="auto"/>
+                </Grid.ColumnDefinitions>
+                <TextBlock x:Name="tbPrivateUsername" Grid.Column="0" Text="PM:username"/>
+                <TextBox x:Name="tbPrivateMessage" Grid.Column="1"/>
+                <Button x:Name="btnCancelPM" Grid.Column="2" Content="Cancel" Width="75" Click="btnCancelPMClick"/>
+                <Button x:Name="btnSendPrivate" Grid.Column="3" Content="Send" Width="75" Click="btnSendPrivateClick"/>
+            </Grid>
+        </Grid>
     </Grid>
 </Window>
