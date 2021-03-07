@@ -24,5 +24,4 @@
   - Radius [client](https://github.com/verloka/Networking/tree/master/src/Radius/Radius/RadiusClient.cs) and [server](https://github.com/verloka/Networking/tree/master/src/Radius/Radius/RadiusServer.cs)
   - gRPC [client](https://github.com/verloka/Networking/tree/master/src/GrpcClient/GrpcClient) and [server](https://github.com/verloka/Networking/tree/master/src/GrpcServer/GrpcServer)
   - SignalR chat [server](https://github.com/verloka/Networking/tree/master/src/SignalRChatServer/SignalRChatServer) and [web client](https://github.com/verloka/Networking/tree/master/src/SignalRChatWebClient/SignalRChatWebClient) with [wpf client](https://github.com/verloka/Networking/tree/master/src/SignalRChatWPFClient/SignalRChatWPFClient)
-  
-  
+  - gRPC [pub](https://github.com/verloka/Networking/tree/master/src/GrpcPub)/[sub](https://github.com/verloka/Networking/tree/master/src/GrpcSub) implementation (with re-subscription if the server has been downed)
