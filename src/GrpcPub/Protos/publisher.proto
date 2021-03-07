@@ -1,0 +1,42 @@
+syntax = "proto3";
+
+option csharp_namespace = "GrpcPub";
+
+package publisher;
+
+
+service Publisher {
+  rpc Subscribe(SubscriptionRequest) returns (stream Event);
+  rpc Unsubscribe(UnsubscriptionRequest) returns (UnsubscriptionRequest);
+  rpc IsSubscribed(IsSubscribedRequest) returns (IsSubscribedResponse);
+}
+
+message Event {
+	EventType type = 1;
+	string detailJson = 2;
+}
+
+message SubscriptionRequest {
+	string id = 1;
+	EventType type = 2;
+}
+
+message UnsubscriptionRequest {
+	string id = 1;
+}
+
+message IsSubscribedRequest {
+	string id = 1;
+}
+
+message IsSubscribedResponse {
+	bool subscribed = 1;
+}
+
+enum EventType {
+	EVENT_TYPE_UNKNOWN = 0;
+	EVENT_TYPE_MESSAGE = 1;
+	EVENT_TYPE_TIME_UPDATE = 2;
+	EVENT_TYPE_NEW_CUSTOMER = 3;
+	EVENT_TYPE_UNSUBSCRIBE = 4;
+}

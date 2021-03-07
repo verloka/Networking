@@ -25,3 +25,4 @@
   - gRPC [client](https://github.com/verloka/Networking/tree/master/src/GrpcClient/GrpcClient) and [server](https://github.com/verloka/Networking/tree/master/src/GrpcServer/GrpcServer)
   - SignalR chat [server](https://github.com/verloka/Networking/tree/master/src/SignalRChatServer/SignalRChatServer) and [web client](https://github.com/verloka/Networking/tree/master/src/SignalRChatWebClient/SignalRChatWebClient) with [wpf client](https://github.com/verloka/Networking/tree/master/src/SignalRChatWPFClient/SignalRChatWPFClient)
   
+  
