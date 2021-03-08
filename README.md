@@ -26,3 +26,5 @@
   - SignalR chat [server](https://github.com/verloka/Networking/tree/master/src/SignalRChatServer/SignalRChatServer) and [web client](https://github.com/verloka/Networking/tree/master/src/SignalRChatWebClient/SignalRChatWebClient) with [wpf client](https://github.com/verloka/Networking/tree/master/src/SignalRChatWPFClient/SignalRChatWPFClient)
   - gRPC [pub](https://github.com/verloka/Networking/tree/master/src/GrpcPub)/[sub](https://github.com/verloka/Networking/tree/master/src/GrpcSub) implementation (with re-subscription if the server has been downed)
   - RabbitMQ [producer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitProducer) and [consumer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitConsumer)
+  - RabbitMQ [producer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitWorkerProducer) and [worker](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitWorkerConsumer)
+  - RabbitMQ [pub](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitPub)/[sub](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitSub) implementation

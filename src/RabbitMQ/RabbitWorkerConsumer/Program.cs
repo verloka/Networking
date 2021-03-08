@@ -40,6 +40,7 @@ namespace RabbitWorkerConsumer
             var body = e.Body.ToArray();
             var message = Encoding.UTF8.GetString(body);
 
+            //emulating a heavy task
             int dots = message.Split('.').Length - 1;
             Thread.Sleep(dots * 1000);
 
