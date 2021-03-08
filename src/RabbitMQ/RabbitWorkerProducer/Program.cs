@@ -2,25 +2,30 @@
 using System;
 using System.Text;
 
-namespace RabbitProducer
+namespace RabbitWorkerProducer
 {
     class Program
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("RabbitMQ Producer");
+            Console.WriteLine("RabbitMQ Worker Producer");
 
             var factory = new ConnectionFactory() { HostName = "localhost" };
             using var connection = factory.CreateConnection();
             using var channel = connection.CreateModel();
 
-            channel.QueueDeclare(queue: "hello",
-                                 durable: false,
+            channel.QueueDeclare(queue: "tasks_queue",
+                                 durable: true,
                                  exclusive: false,
                                  autoDelete: false,
                                  arguments: null);
 
-            while(true)
+            var properties = channel.CreateBasicProperties();
+            properties.Persistent = true;
+
+            int i = 1;
+
+            while (true)
             {
                 Console.WriteLine("To exit type 'exit'");
                 Console.Write("Send: ");
@@ -32,10 +37,10 @@ namespace RabbitProducer
 
                     if (str != "exit")
                     {
-                        var body = Encoding.UTF8.GetBytes(str);
+                        var body = Encoding.UTF8.GetBytes($"{i++}) {str}");
                         channel.BasicPublish(exchange: "",
-                                     routingKey: "hello",
-                                     basicProperties: null,
+                                     routingKey: "tasks_queue",
+                                     basicProperties: properties,
                                      body: body);
 
                         Console.WriteLine($"Sended: {str}");
