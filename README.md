@@ -28,3 +28,4 @@
   - RabbitMQ [producer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitProducer) and [consumer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitConsumer)
   - RabbitMQ [producer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitWorkerProducer) and [worker](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitWorkerConsumer)
   - RabbitMQ [pub](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitPub)/[sub](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitSub) implementation
+  - RabbitMQ [producer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitRoutingProducer) and [consumer](https://github.com/verloka/Networking/tree/master/src/RabbitMQ/RabbitRoutingConsumer) with routing

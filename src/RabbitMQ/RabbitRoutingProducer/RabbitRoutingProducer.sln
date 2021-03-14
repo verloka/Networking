@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitRoutingProducer", "RabbitRoutingProducer.csproj", "{5B3BF958-156B-40CB-B66F-C003C69EE62D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RabbitRoutingConsumer", "..\RabbitRoutingConsumer\RabbitRoutingConsumer.csproj", "{0B380FAF-3E05-4B0A-B4A3-956EAABCA922}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{5B3BF958-156B-40CB-B66F-C003C69EE62D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5B3BF958-156B-40CB-B66F-C003C69EE62D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5B3BF958-156B-40CB-B66F-C003C69EE62D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5B3BF958-156B-40CB-B66F-C003C69EE62D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0B380FAF-3E05-4B0A-B4A3-956EAABCA922}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0B380FAF-3E05-4B0A-B4A3-956EAABCA922}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0B380FAF-3E05-4B0A-B4A3-956EAABCA922}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0B380FAF-3E05-4B0A-B4A3-956EAABCA922}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {32DD4F67-FFDD-4F63-BEFE-501D46559F27}
+	EndGlobalSection
+EndGlobal
