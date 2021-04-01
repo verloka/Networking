@@ -348,3 +348,5 @@ MigrationBackup/
 
 # Ionide (cross platform F# VS Code tools) working folder
 .ionide/
+/src/WCF/WCFSimpleServerAndClients/WCFServiceClient/Connected Services/HelloService
+/src/WCF/WCFSimpleServerAndClients/WCFServiceClient/App.config
