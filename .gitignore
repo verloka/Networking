@@ -350,3 +350,4 @@ MigrationBackup/
 .ionide/
 /src/WCF/WCFSimpleServerAndClients/WCFServiceClient/Connected Services/HelloService
 /src/WCF/WCFSimpleServerAndClients/WCFServiceClient/App.config
+/src/WCF/WCFComplexServerAndClients/WCFServiceClient/Connected Services/HelloService
